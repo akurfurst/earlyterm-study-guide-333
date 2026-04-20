@@ -1,4 +1,5 @@
 import static org.junit.Assert.*;
+import java.util.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -21,6 +22,31 @@ public class PracticeTest {
 
     // TODO: Make tests for each problem you solve
     
+    @Test
+    void longestStartsWithTest(){
+        Set<String> words = new HashSet<>();
+        words.add("abc");
+        words.add("xyz");
+        words.add("abcd");
+
+        String actual = Practice.longestStartsWith(words, 'a');
+
+        assertEquals("abcd", actual);
+    }
+
+    @Test
+    void longerAndShorterTest(){
+        List<String> words = new ArrayList<>();
+        words.add("1");
+        words.add("11");
+        words.add("111");
+        words.add("1111");
+        words.add("11111");
+
+        int actual = Practice.longerAndShorter(1, 4, words);
+
+        assertEquals(2, actual);
+    }
 }
 
 

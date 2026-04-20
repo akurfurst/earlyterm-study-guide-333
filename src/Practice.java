@@ -1,3 +1,4 @@
+import java.util.*;
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -7,7 +8,13 @@ public class Practice {
      */
     public static int maxDiff(int[] nums) {
         // TODO: implement this
-        return -1;
+        int max = nums[0];
+        int min = nums[0];
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] > max) max = nums[i];
+            if(nums[i] < min) min = nums[i];
+        }
+        return max - min;
     }
 
 
@@ -16,4 +23,20 @@ public class Practice {
     // For each method you are only required to implement it for one of the data
     // structures. But use a different data structure for each method. For example,
     // do maxDiff with an array, the next question with a Set, etc.
+
+    public static String longestStartsWith(Set<String> words, char start){
+        String result = "";
+        for(String word : words){
+            if(word.toLowerCase().charAt(0) == start && word.length() > result.length()) result = word;
+        }
+        return result;
+    }
+
+    public static int longerAndShorter(int n, int m, List<String> words){
+        int result = 0;
+            for(String word : words){
+                if(word.length() > n && word.length() < m) result++;
+            }
+        return result;
+    }
 }
