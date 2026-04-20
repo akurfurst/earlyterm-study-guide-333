@@ -49,4 +49,16 @@ public class Practice {
         }
         return odd - even;
     }
+
+    public static int secondLargest(Map<Integer, Integer> nums){
+        int largest = 0;
+        int secondLargest = 0;
+        for(int num : nums.keySet()){
+            if(num > largest){
+                secondLargest = largest;
+                largest = num;
+            }
+        }
+        return secondLargest;
+    }
 }
