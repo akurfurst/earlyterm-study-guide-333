@@ -39,4 +39,14 @@ public class Practice {
             }
         return result;
     }
+
+    public static int diffOddEven(Map<Integer, Integer> nums){
+        int odd = 0;
+        int even = 0;
+        for(int num : nums.values()){
+            if(num % 2 == 0) even++;
+            else odd++;
+        }
+        return odd - even;
+    }
 }

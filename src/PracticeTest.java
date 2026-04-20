@@ -47,6 +47,20 @@ public class PracticeTest {
 
         assertEquals(2, actual);
     }
+
+    @Test
+    void diffOddEvenTest(){
+        Map<Integer, Integer> nums = new HashMap<>();
+        nums.put(0,1);
+        nums.put(1,2);
+        nums.put(2,3);
+
+        int actual = Practice.diffOddEven(nums);
+
+        assertEquals(1, actual);
+    }
+
+    
 }
 
 
